@@ -1,23 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import Nav from './components/Nav';
+import { useEffect, useState } from "react"
+import axios from 'axios';
+import NewsContent from './components/NewsContent/NewsContent';
+
 
 function App() {
+
+  const [category, setCategory]  = useState("general");
+  const [news, setNews] = useState([]);
+  const [newsResults, setNewsResults] = useState();
+  const[loadMore, setLoadMore] = useState(20);  
+
+
+  
+  
+  const newsApi =async()=>{
+      const data = await axios.get(`https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${process.env.REACT_APP_API_KEY}&pageSize=${loadMore}`);
+      setNews(data.data.articles);
+      setNewsResults(data.data.totalResults);
+      
+    };
+    console.log(news);
+ useEffect(()=>{ 
+     newsApi();
+ },[category, newsResults, loadMore])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+         <Nav setCategory={setCategory}/>
+         <NewsContent  news={news} newsResults={newsResults}
+          loadMore={loadMore} setLoadMore={setLoadMore}
+         />
+         
     </div>
   );
 }

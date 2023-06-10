@@ -1,0 +1,10 @@
+.Nav{
+    height: 70px;
+    width: 100%;
+    box-shadow: 0px 1px 8px red;
+    display: flex;
+    
+}
+.icons{
+    flex: .5;
+}

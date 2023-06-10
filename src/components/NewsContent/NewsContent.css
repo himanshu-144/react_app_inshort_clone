@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Montserrat:wght@300;400;800&family=Noto+Sans:wght@100&family=Poppins:wght@100;300&family=Raleway:ital,wght@1,100;1,200&family=Roboto:ital,wght@0,400;0,500;1,500&family=Sono:wght@300;400;500&family=Source+Sans+Pro:wght@300;400&family=Work+Sans:wght@200;400&display=swap');
+.mesage{
+    
+    display: flex;
+    align-items: center;
+    background: #f44336;
+    height: 48px;
+    padding: 0 40px;
+    margin: 20px 0 35px 0; 
+    color: white;
+    box-shadow: 0 2px 5px 0 rgb(160, 160, 236);
+    width: 95%;
+    font-family: 'Poppins', sans-serif;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    align-items: center;
+}
+
+    
+
+

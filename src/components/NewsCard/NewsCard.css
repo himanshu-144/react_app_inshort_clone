@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Montserrat:wght@300;400;800&family=Noto+Sans:wght@100&family=Poppins:wght@100;300&family=Raleway:ital,wght@1,100;1,200&family=Roboto:ital,wght@0,400;0,500;1,500&family=Sono:wght@300;400;500&family=Source+Sans+Pro:wght@300;400&family=Work+Sans:wght@200;400&display=swap');
+
+.card{
+font-family: 'Poppins', sans-serif;
+ 
+ width: 100%;
+ border: 2px solid red;
+ display: flex;
+ box-shadow: 0 2px 5px 0 rgb(232, 83, 123);
+ padding: 10px;
+ margin-bottom: 25px;
+ border-radius: 5px;
+}
+.imageCard{
+object-fit: cover;
+height: 300px;
+width: 400px;
+border-radius: 5px;
+border: 2px solid rgb(121, 121, 232);
+
+}
+.lowerText{
+    font-family: 'Noto+Sans', sans-serif;
+}
+.title{
+    font-family: 'Montserrat', sans-serif;
+}
+.CardText{
+    display: flex;
+    flex-direction: column;
+    padding: 1px 0 0 10px;
+    justify-content: space-between;
+}
+.upperText{
+    display: flex;
+    flex-direction: column;
+    
+}
+.lowerText{
+    margin-bottom: 10px;
+}
